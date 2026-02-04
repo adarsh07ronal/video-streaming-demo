@@ -1,0 +1,55 @@
+adarshs-MacBook-Air:video_streaming_api adarsh$ curl -X POST http://localhost:3000/videos/presign \
+>   -H "Content-Type: application/json" \
+>   -d '{
+>     "filename": "test-video.mp4",
+>     "content_type": "video/mp4"
+>   }'
+{"upload_url":"https://video-streaming-demo-adarsh.s3.ap-southeast-2.amazonaws.com/uploads/21daa3e9-bbbe-4dd6-b681-1469d2eeb785-test-video.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWSC3KOBZ6UKMNZ7L%2F20260204%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20260204T022645Z&X-Amz-Expires=900&X-Amz-SignedHeaders=content-type%3Bhost&X-Amz-Signature=9200c4429f7b9019ef5e570b3ff6d7267d2a52d9cc00301709d98d639ed67d7f","key":"uploads/21daa3e9-bbbe-4dd6-b681-1469d2eeb785-test-video.mp4"}
+
+curl -X PUT \
+  -H "Content-Type: video/mp4" \
+  --upload-file test-video.mp4 \
+  "https://video-streaming-demo-adarsh.s3.ap-southeast-2.amazonaws.com/uploads/21daa3e9-bbbe-4dd6-b681-1469d2eeb785-test-video.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWSC3KOBZ6UKMNZ7L%2F20260204%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20260204T022645Z&X-Amz-Expires=900&X-Amz-SignedHeaders=content-type%3Bhost&X-Amz-Signature=9200c4429f7b9019ef5e570b3ff6d7267d2a52d9cc00301709d98d639ed67d7f"
+
+
+adarshs-MacBook-Air:video_streaming_api adarsh$ curl -X POST http://localhost:3000/videos/presign \
+>   -H "Content-Type: application/json" \
+>   -d '{
+>     "filename": "test-video.mp4",
+>     "content_type": "video/mp4"
+>   }'
+{"upload_url":"https://video-streaming-demo-adarsh.s3.ap-southeast-2.amazonaws.com/uploads/979b13c3-e3b4-4f04-87a8-ed670aa6864d-test-video.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWSC3KOBZ6UKMNZ7L%2F20260204%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20260204T030002Z&X-Amz-Expires=900&X-Amz-SignedHeaders=content-type%3Bhost&X-Amz-Signature=77169c92e7acc2f0e9eadd7414d32fd230c93468f0b61a1819436081ddc38597","key":"uploads/979b13c3-e3b4-4f04-87a8-ed670aa6864d-test-video.mp4"}
+
+curl -X PUT \
+  -H "Content-Type: video/mp4" \
+  --upload-file test-video.mp4 \
+  "https://video-streaming-demo-adarsh.s3.ap-southeast-2.amazonaws.com/uploads/979b13c3-e3b4-4f04-87a8-ed670aa6864d-test-video.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWSC3KOBZ6UKMNZ7L%2F20260204%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20260204T030002Z&X-Amz-Expires=900&X-Amz-SignedHeaders=content-type%3Bhost&X-Amz-Signature=77169c92e7acc2f0e9eadd7414d32fd230c93468f0b61a1819436081ddc38597"
+
+
+  curl -X PUT \
+  -H "Content-Type: video/mp4" \
+  --upload-file real-video.mp4 \
+  "https://video-streaming-demo-adarsh.s3.ap-southeast-2.amazonaws.com/uploads/f4bd3cc1-d961-4b63-a3f0-6cea2067978d-real-video.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWSC3KOBZ6UKMNZ7L%2F20260204%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20260204T034052Z&X-Amz-Expires=900&X-Amz-SignedHeaders=content-type%3Bhost&X-Amz-Signature=ae136f32c8a30b09c496f76b9bac29defc9d8d1e94c3c351bc08b8df3394e5f8"
+
+  adarshs-MacBook-Air:video_streaming_api adarsh$ curl -X POST http://localhost:3000/videos/presign \
+>   -H "Content-Type: application/json" \
+>   -d '{
+>     "filename": "real-video.mp4",
+>     "content_type": "video/mp4"
+>   }'
+{"upload_url":"https://video-streaming-demo-adarsh.s3.ap-southeast-2.amazonaws.com/uploads/f4bd3cc1-d961-4b63-a3f0-6cea2067978d-real-video.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWSC3KOBZ6UKMNZ7L%2F20260204%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20260204T034052Z&X-Amz-Expires=900&X-Amz-SignedHeaders=content-type%3Bhost&X-Amz-Signature=ae136f32c8a30b09c496f76b9bac29defc9d8d1e94c3c351bc08b8df3394e5f8","key":"uploads/f4bd3cc1-d961-4b63-a3f0-6cea2067978d-real-video.mp4"}adarshs-MacBook-Air:video_streaming_api adarsh$ 
+
+
+
+https://video-streaming-demo-adarsh.s3.ap-southeast-2.amazonaws.com/uploads/1fa52bd6-5b0e-477d-a2bd-c0d3ca36020b-long-demo.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWSC3KOBZ6UKMNZ7L%2F20260204%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20260204T083600Z&X-Amz-Expires=900&X-Amz-SignedHeaders=content-type%3Bhost&X-Amz-Signature=97bf6436cf27cbe2d74dad7258bb44ed201a1ec2ab286d3b06630fd58130d63f
+
+curl -X PUT \
+  -H "Content-Type: video/mp4" \
+  --upload-file long-demo.mp4 \
+  "https://video-streaming-demo-adarsh.s3.ap-southeast-2.amazonaws.com/uploads/1fa52bd6-5b0e-477d-a2bd-c0d3ca36020b-long-demo.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWSC3KOBZ6UKMNZ7L%2F20260204%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20260204T083600Z&X-Amz-Expires=900&X-Amz-SignedHeaders=content-type%3Bhost&X-Amz-Signature=97bf6436cf27cbe2d74dad7258bb44ed201a1ec2ab286d3b06630fd58130d63f"
+
+
+video.update!(
+  filename: "long-demo.mp4",
+  s3_key: "uploads/1fa52bd6-5b0e-477d-a2bd-c0d3ca36020b-long-demo.mp4"
+)

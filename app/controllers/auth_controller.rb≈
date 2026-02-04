@@ -1,0 +1,19 @@
+class AuthController < ApplicationController
+  def google
+    payload = FirebaseAuthService.verify(params[:id_token])
+
+    return render json: { error: 'Invalid token' }, status: :unauthorized unless payload
+
+    user = User.find_or_create_by!(google_uid: payload['sub']) do |u|
+      u.email = payload['email']
+      u.name  = payload['name']
+    end
+
+    jwt = JWT.encode(
+      { user_id: user.id, exp: 7.days.from_now.to_i },
+      Rails.application.secret_key_base
+    )
+
+    render json: { token: jwt }
+  end
+end

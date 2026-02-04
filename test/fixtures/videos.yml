@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  filename: MyString
+  s3_key: MyString
+  content_type: MyString
+  status: MyString
+
+two:
+  filename: MyString
+  s3_key: MyString
+  content_type: MyString
+  status: MyString
